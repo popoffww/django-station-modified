@@ -39,7 +39,7 @@ def get_graph():
     return graph
 
 
-# @login_required(login_url='/login/')
+@login_required(login_url='/login/')
 def home(request):
     form = RouteForm()
     return render(request, 'routes/home.html', {'form': form})
