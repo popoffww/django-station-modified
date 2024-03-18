@@ -33,7 +33,6 @@ urlpatterns = [
     path('detail/<int:pk>/', RouteDetailView.as_view(), name='detail'),
     path('delete/<int:pk>/', RouteDeleteView.as_view(), name='delete'),
     path('', home, name='home'),
-
 ]
 
 
