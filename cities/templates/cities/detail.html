@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+  Город - {{ block.super }}
+ {% endblock %}
+
+{% block content %}
+
+        <div class="row">
+
+        <div class="jumbotron py-5 my-5 col-md-6 offset-3">
+
+        <h2 class="display-4 pb-3 pr-2 text-center">Город</h2>
+
+        <p class="lead text-center">Название города <b>"{{ object }}"</b></p>
+
+        <div class="col-md-8 mx-auto pt-3 d-flex justify-content-center">
+            <a href="{% url 'city:home' %}"
+                class="btn btn-outline-info btn-lg">Вернуться к списку</a>
+        </div>
+
+        </div>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

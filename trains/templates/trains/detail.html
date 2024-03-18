@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+  Поезд - {{ block.super }}
+ {% endblock %}
+
+{% block content %}
+
+        <div class="row">
+
+        <div class="jumbotron m-auto  col-md-9 offset-2">
+
+        <h2 class="display-4 pb-3 pr-2 text-center">Поезд</h2>
+
+<!--        <p class="lead text-center">Название города <b>"{{ object }}"</b></p>-->
+
+            <!--Таблица-->
+        <table class="table table-striped">
+
+            <thead>
+            <tr>
+                <th>Номер поезда</th>
+                <th>Станция отправки</th>
+                <th>Станция прибытия</th>
+                <th>Время пути</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+
+        <tbody>
+
+        <tr>
+
+            <td>
+                {{ object.name }}
+            </td>
+
+            <td>
+            {{ object.from_city }}
+            </td>
+
+            <td>
+            {{ object.to_city }}
+            </td>
+
+            <td>
+            {{ object.travel_time }}
+            </td>
+
+            <td>
+            <a href="{% url 'train:update' pk=object.pk %}" class="text-dark">
+            <button class="btn btn-outline-success">
+            Редактировать
+            </button>
+            </a>
+            </td>
+
+            <td>
+            <a href="{% url 'train:delete' pk=object.pk %}" class="text-dark">
+            <button class="btn btn-outline-danger">
+            Удалить
+            </button>
+            </a>
+            </td>
+
+        </tr>
+
+        </tbody>
+        </table>
+
+        <div class="col-md-8 mx-auto pt-3 d-flex justify-content-center">
+            <a href="{% url 'train:home' %}"
+                class="btn btn-outline-info btn-lg">Вернуться к списку</a>
+        </div>
+
+        </div>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
