@@ -5,7 +5,7 @@
     <h1 class="display-4 text-center">Сохранить новый Маршрут</h1>
     <div class="row mx-auto justify-content-center">
         <div class='col-md-8'>
-            <form action="" method="post"> {% csrf_token %} 
+            <form action="" method="post"> {% csrf_token %}
                 {{form.as_p}}
                 <p>Машрут из г.{{from_city}} в г.{{to_city}}, 
                     продолжительностью {{travel_times}}  </p>

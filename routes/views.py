@@ -9,7 +9,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from trains.models import Train
 from .forms import *
 
-
 def dfs_paths(graph, start, goal):
     """Функция поиска всех возможных маршрутов
        из одного города в другой. Вариант посещения
@@ -26,7 +25,6 @@ def dfs_paths(graph, start, goal):
                 else:
                     stack.append((next_, path + [next_]))
 
-
 def get_graph():
     qs = Train.objects.values('from_city')
     from_city_set = set(i['from_city'] for i in qs)
@@ -41,6 +39,11 @@ def get_graph():
 
 @login_required(login_url='/login/')
 def home(request):
+    form = RouteForm()
+    return render(request, 'home.html', {'form': form})
+
+@login_required(login_url='/login/')
+def route_search(request):
     form = RouteForm()
     return render(request, 'routes/home.html', {'form': form})
 

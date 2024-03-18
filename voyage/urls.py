@@ -26,6 +26,7 @@ urlpatterns = [
     path('register/', register_view, name='register'),
     path('cities/', include(('cities.urls', 'city'))),
     path('trains/', include(('trains.urls', 'train'))),
+    path('routes/', include(('routes.urls', 'route'))),
     path('find/', find_routes, name='find_routes'),
     path('add_route/', add_route, name='add_route'),
     path('list/', RouteListView.as_view(), name='list'),
